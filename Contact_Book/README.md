@@ -1,0 +1,1 @@
+The Contact Book is a web-based CRUD (Create, Read, Update, Delete) application built using Python Flask and SQLite. It allows users to manage personal or professional contacts efficiently through a clean and user-friendly interface.
