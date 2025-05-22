@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head><title>Contact Book</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Contact List</h1>
+    <form method="get">
+        <input type="text" name="search" value="{{ search }}" placeholder="Search by name or phone">
+        <button type="submit">Search</button>
+    </form>
+    <a href="{{ url_for('add') }}">Add New Contact</a>
+    <table border="1">
+        <tr><th>Name</th><th>Phone</th><th>Email</th><th>Address</th><th>Actions</th></tr>
+        {% for c in contacts %}
+        <tr>
+            <td>{{ c[1] }}</td><td>{{ c[2] }}</td><td>{{ c[3] }}</td><td>{{ c[4] }}</td>
+            <td>
+                <a href="{{ url_for('edit', id=c[0]) }}">Edit</a>
+                <a href="{{ url_for('delete', id=c[0]) }}" onclick="return confirm('Delete this contact?')">Delete</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
