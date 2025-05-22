@@ -1,0 +1,1 @@
+ Simple, user-friendly To-Do List desktop application using Python and Tkinter that allows users to add, edit, delete, and mark tasks as completed, helping them efficiently manage their daily tasks and deadlines.
